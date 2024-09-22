@@ -1,0 +1,23 @@
+<div><h1>Products listing</h1></div>
+<input type="text" [(ngModel)]="searchTerm" placeholder="Search products" />
+<div class="container">
+<table class ="table">
+  <tr *ngFor="let u of emp.products  | paginate: { itemsPerPage: count, currentPage: p } | filter : searchTerm : 'title'">
+    <td>
+      {{u.id}}
+    </td>
+    <td>
+      {{u.title}}
+    </td>
+    <td>
+      {{u.description}}
+    </td>
+    <td>
+      <button class= 'btn btn-info' (click)="getProductDetails(u.id)"> VIEW DATA</button>
+    </td>
+  </tr>
+</table>
+</div>
+<div class="text-right">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>   <!--for pagination-->
+</div>

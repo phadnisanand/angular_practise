@@ -1,0 +1,18 @@
+<div class="parentc"><p>home works!</p></div>
+<div class="childc">
+  <app-home-child [message]="data" (dataEvent)="handleDataFromChild($event)"></app-home-child>
+</div>
+{{ receivedData }}
+<!--<app-home-child [message]="data1"></app-home-child>-->
+<div class="childc">
+  <app-another-home-child (click)="showData()"></app-another-home-child>
+</div>
+<div [style.color]="status=='error' ? 'red': 'green'"
+     [style.text-align] = "'center'"
+     [style.font-size.px]="'24'" >
+  GeeksforGeeks
+</div>
+<h1 [class] = "geeky">
+  class binding
+</h1>
+<button (click) = "ClassesToApply()" >Click Me</button>

@@ -1,0 +1,49 @@
+{
+  "employees": [
+    {
+      "id": "714c",
+      "name": "Anand",
+      "post": "TCS",
+      "salary": "11212",
+      "address": "nagpur"
+    },
+    {
+      "id": "01af",
+      "name": "Sudhir",
+      "post": "AST",
+      "salary": "10000",
+      "address": "rajkot"
+    },
+    {
+      "id": "74a5",
+      "name": "Test",
+      "post": "AST",
+      "salary": "100000",
+      "address": "bhopal"
+    },
+    {
+      "id": "1897",
+      "name": "Nutan",
+      "post": "Home",
+      "salary": "20000",
+      "address": "Indore"
+    }
+  ],
+  "Users": [
+    {
+      "id": "201",
+      "username": "admin1",
+      "password": "admin@1"
+    },
+    {
+      "id": "307",
+      "username": "admin2",
+      "password": "admin@2"
+    },
+    {
+      "id": "403",
+      "username": "admin3",
+      "password": "admin@3"
+    }
+  ]
+}

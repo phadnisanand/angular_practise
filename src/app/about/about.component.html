@@ -1,0 +1,12 @@
+<p>How data binding works</p>
+Enter First Name <input type="text" name="fname" [(ngModel)]="fname" /> <br />
+Enter Last Name <input type="text" name="lname" [(ngModel)]="lname"  /> <br />
+{{ fname }}  {{lname}}  <br />
+<button (click)="concat()">
+  Concatenate
+</button> <br />
+Your Concatenation is:
+<b style="color: green;">
+    {{ result }}
+</b>
+<app-life-cycle></app-life-cycle>

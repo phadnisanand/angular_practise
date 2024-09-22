@@ -1,0 +1,57 @@
+<div class="container">
+  <form [formGroup]='signupForm' (ngSubmit)="PostData(signupForm)" >
+      <div class="form-container">
+          <div class="row columns">
+      <div class="form-group">
+      <input class="form-control" type="text" formControlName='fname' name='fname' id='fname' placeholder="Your First name" required>
+        <div *ngIf="signupForm.controls['fname'].touched && !signupForm.controls['fname'].valid">
+          <span *ngIf="signupForm.controls['fname'].hasError('required')">
+              First name is required
+            </span>
+            <span *ngIf="signupForm.controls['fname'].hasError('minlength') ">
+            Min length is 1
+            </span>
+            <span *ngIf="signupForm.controls['fname'].hasError('maxlength') ">
+            max length is 15
+        </span>
+      </div>
+    </div>
+    <div class="form-group">
+    <input class="form-control" type="text" formControlName='lname' placeholder="Your Last name" required>
+
+    <div *ngIf="signupForm.controls['lname'].touched && !signupForm.controls['lname'].valid">
+        <span *ngIf="signupForm.controls['lname'].hasError('required') ">
+            Last name is required
+            </span>
+            <span *ngIf="signupForm.controls['lname'].hasError('minlength') ">
+             Min length is 1
+            </span>
+            <span *ngIf="signupForm.controls['lname'].hasError('maxlength') ">
+            max length is 15
+        </span>
+    </div>
+  </div>
+
+    <div class="form-group"><input type="text" class="form-control" formControlName='Emailid' placeholder="Your Email id" required></div>
+    <div *ngIf="signupForm.controls['Emailid'].touched && !signupForm.controls['Emailid'].valid">
+    <span *ngIf="signupForm.controls['Emailid'].hasError('required') ">
+        Email ID is needed
+          </span>
+
+      <span *ngIf="signupForm.controls['Emailid'].hasError('email') ">
+        Invalid Email ID
+        </span>
+
+    </div>
+    <br>
+    <div class="form-group">
+    <input type="Password" class="form-control" formControlName='userpassword' placeholder="Your password" required>
+  </div>
+  <br>
+  <div class="form-group">
+      <input type="Submit" class="btn btn-primary"  value="Post Data" [disabled]='!signupForm.valid' >
+  </div>
+  </div>
+  </div>
+  </form>
+</div>

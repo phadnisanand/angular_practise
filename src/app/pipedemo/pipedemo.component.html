@@ -1,0 +1,45 @@
+<h1>Pipes Demo</h1>
+
+Fullname:- {{fullname}} <br/>
+
+Uppercase Pipe:- {{fullname | uppercase}} <br/>
+
+Lowercase Pipe:- {{fullname | lowercase}} <br/>
+
+Titlecase Pipe:- {{fullname | titlecase}} <br/>
+
+Slice  Pipe:- {{fullname | slice : -8: -5}} <br/><br/>
+
+Number Pipe:- {{aNumber | number : '3.2-3'}} <br/><br/>
+
+Currency Pipe:- {{aCurrency | currency : 'INR' : 'symbol' }} <br/>
+
+Currency Pipe:- {{aCurrency | currency : 'INR' : 'code' }} <br/>
+
+Currency Pipe:- {{aCurrency | currency : 'INR' : true }} <br/>
+
+Currency Pipe:- {{aCurrency | currency : 'INR' : false }} <br/><br/>
+
+
+
+Percentage Pipe:- {{aCurrency}}  -- {{aCurrency | percent : '3.3-6'}} <br/><br/>
+
+Date Pipe :- {{datevar}} -- <br/>
+
+{{datevar | date : 'long'}} <br/>
+
+{{datevar | date : 'short'}} <br/>
+
+{{datevar | date : 'medium'}} <br/>
+
+Date Pipe :- {{datevar | date : 'MMMM, dd YYYY hh:mm:ss -z'}} <br/>
+<br/><br/>
+<p>Student Custom Pipe</p>
+<ul>
+  <li *ngFor="let item of nameofstudent;let odd = odd">{{item | studentdemo : odd}}</li>
+</ul>
+<br/><br/>
+<p>Currency Custom Pipe</p>
+<ul>
+  <li *ngFor="let item1 of elementsArr;let i = index">{{item1 | currencycustom :i }}</li>
+</ul>

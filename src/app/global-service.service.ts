@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class GlobalService {
 
-  baseURL:string = "http://localhost:3000"   // where our data is stored in JSON server
+  baseURL:string = "https://json-server-demo-ccoo.onrender.com"   // where our data is stored in JSON server
   constructor(private http: HttpClient) { }   // Injected HTTP Client
 
   getRecords(table: string){       // READ records
